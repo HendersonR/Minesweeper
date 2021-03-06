@@ -1,0 +1,18 @@
+<h1>Minesweeper</h1>
+<button (click)="newGame()">New Game</button>
+
+<h2 *ngIf="gameover">You {{result}}!</h2>
+<h3 *ngIf="found"> Bomb found!</h3> <!-- remove later-->
+
+<main>
+    <app-square
+        *ngFor="let val of squares; let i = index " 
+        [value]="val"
+        (click)="makeMove(i)"
+        ng-disabled="buttonClicked">
+
+        
+
+
+    </app-square>
+</main>
